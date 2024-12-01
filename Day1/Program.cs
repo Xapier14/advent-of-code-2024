@@ -31,7 +31,7 @@ return;
 
     for (var i = 0; i < input.Length; ++i)
     {
-        var values = input[i].Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(v => v.Trim()).ToArray();
+        var values = input[i].Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
         list1[i] = int.Parse(values[0]);
         list2[i] = int.Parse(values[1]);
     }
