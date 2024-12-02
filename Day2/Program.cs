@@ -49,11 +49,7 @@ int[][] Expand(int[] input)
     var buffer = new List<int>();
     for (var i = 0; i < input.Length; ++i)
     {
-        for (var j = 0; j < input.Length; ++j)
-        {
-            if (i == j) continue;
-            buffer.Add(input[j]);
-        }
+        buffer.AddRange(input.Where((_, j) => i != j));
         result.Add(buffer.ToArray());
         buffer.Clear();
     }
