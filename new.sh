@@ -1,4 +1,4 @@
-day="$(date '+%d')"
+day="$(date '+%-d')"
 projectDir="Day$day"
 
 if test -d $projectDir; then
